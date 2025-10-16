@@ -154,12 +154,13 @@ The dashboard includes:
 	•	Hourly User Activity
 
 ### 💡 Notes ###
-```
-	•	The raw dataset is not uploaded due to size limits.You can download it from [Kaggle link here].
-	•	Database connection details are defined in profiles.yml.
-	•	To rebuild the dashboard, connect Superset to your PostgreSQL database and import the SQL models.
-```
+
+•	The raw dataset is not uploaded due to size limits.You can download it from [Kaggle link here].
+•	Database connection details are defined in profiles.yml.
+•	To rebuild the dashboard, connect Superset to your PostgreSQL database and import the SQL models.
+
 
 ---
 
 👤 **Author:** Ahmed Abohamad  
+
