@@ -1,11 +1,11 @@
-#E-Commerce Data Pipeline#
+# E-Commerce Data Pipeline #
 
-##🎯 Overview##
+## 🎯 Overview ##
 
 This project demonstrates a modern end-to-end data pipeline for e-commerce analytics.
 It extracts raw event data, transforms it with Apache Spark, loads it into PostgreSQL, models it using dbt, and visualizes business insights with Apache Superset.
 
-##🧱 Project Architecture##
+## 🧱 Project Architecture ##
 
 ```
 Raw CSV (Landing) 
@@ -17,30 +17,25 @@ PostgreSQL (Staging)
 dbt (Silver & Gold models)
    ↓
 Superset Dashboard (Visualization)
-
-![flow diagram](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/pipeline%20Arch.drawio.png)
 ```
 
-##⚙️ Technologies Used##
+![flow diagram](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/pipeline%20Arch.drawio.png)
 
-Tool
-Purpose
-🐍 Python
-Data transformation scripts
-🔥 Apache Spark
-Data cleaning & Parquet writing
-🐘 PostgreSQL
-Central warehouse
-🧱 dbt
-Data modeling (staging, gold)
-📊 Apache Superset
-Dashboard & visualization
-🐙 GitHub
-Version control
 
-##🧩 Data Architecture Layers##
+## ⚙️ Technologies Used ##
 
-###🟤 Bronze Layer (Raw → Cleaned Parquet)###
+| Tool | Purpose |
+|------|----------|
+| 🐍 **Python** | Core programming language used for scripting and automation |
+| 🔥 **Apache Spark** | Data cleaning, transformation, and Parquet file generation |
+| 🐘 **PostgreSQL** | Central data warehouse for structured storage |
+| 🧱 **dbt** | Data modeling and schema management (staging → silver → gold) |
+| 📊 **Apache Superset** | Data visualization and interactive dashboards |
+| 🐙 **GitHub** | Version control and project collaboration |
+
+## 🧩 Data Architecture Layers ##
+
+### 🟤 Bronze Layer (Raw → Cleaned Parquet) ###
 	•	Tool: Apache Spark
 	•	Input: CSV files (data/landing/)
 	•	Output: Cleaned, partitioned Parquet files (data/bronze/events/)
@@ -51,7 +46,7 @@ Key operations:
 	•	Parsing timestamps
 	•	Adding ingestion metadata (ingested_at, event_date)
 
-###🟠 Staging Layer (stg in PostgreSQL)###
+### 🟠 Staging Layer (stg in PostgreSQL) ###
 
 ![stg](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/data%20warehous%20stg.drawio.png)
 
@@ -59,7 +54,7 @@ Key operations:
 	•	Created by: load_to_postgres.py
 	•	Purpose: Store typed, validated event data directly from the bronze layer before business transformations.
 
-###⚪ Silver Layer (silver schema)###
+### ⚪ Silver Layer (silver schema) ###
 
 ![silver](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/data%20warehous%20silver.drawio%20(1).png)
 
@@ -68,7 +63,7 @@ Purpose: Transform raw events into a star schema for analytical modeling.
 Relationships:
 dim_users (1)───< fact_events >───(1) dim_products
 
-###🟡 Gold Layer (analytics schema via dbt)###
+### 🟡 Gold Layer (analytics schema via dbt) ###
 
 Purpose: Create business-ready metrics and aggregations for the dashboard.
 
@@ -80,7 +75,7 @@ Purpose: Create business-ready metrics and aggregations for the dashboard.
 | analytics.top_products | Top-selling and viewed products |
 | analytics.category_price_trends  | Price trends per category |
 
-**📂 Project Structure**
+## 📂 Project Structure ##
 
 ```
 ecommerce-pipeline/
@@ -110,23 +105,28 @@ ecommerce-pipeline/
 └── README.md
 ```
 
-🚀 How to Run the Project
+## 🚀 How to Run the Project ##
 
-1️⃣ Set up PostgreSQL
+### 1️⃣ Set up PostgreSQL ###
 	1.	Install PostgreSQL (version 14 or newer).
-  2.  Follow the steps in the warehouse sql sheet
+    2.  2. Create a new database and user:
+	sql
+	CREATE DATABASE ecommerce_pipeline;
+	CREATE USER postgres WITH PASSWORD '1234';
+	GRANT ALL PRIVILEGES ON DATABASE ecommerce_pipeline TO postgres;
 
-2️⃣ Install dependencies
+### 2️⃣ Install dependencies ###
 ```
 pip install -r requirements.txt
 ```
 
-3️⃣ Prepare directories
+### 3️⃣ Prepare directories ###
+```
 data/
  ├── landing/  ← place your CSV files here
  └── bronze/
-
- 4️⃣ Run the full pipeline
+```
+ ### 4️⃣ Run the full pipeline ###
  ```
  bash run_pipeline.sh
  ```
@@ -137,7 +137,7 @@ data/
 	•	Load them into PostgreSQL
 	•	Run dbt models & tests
 
-5️⃣ Launch Superset dashboard
+### 5️⃣ Launch Superset dashboard ###
 superset run -p 8088 --host 127.0.0.1
 
 Then open:
@@ -145,7 +145,7 @@ Then open:
 http://localhost:8088
 ```
 
-📊 Dashboard Metrics
+## 📊 Dashboard Metrics ##
 The dashboard includes:
 	•	Top Products by Revenue
 	•	Daily Conversion Rates
@@ -153,7 +153,13 @@ The dashboard includes:
 	•	Category Price Trends
 	•	Hourly User Activity
 
-💡 Notes
+### 💡 Notes ###
+```
 	•	The raw dataset is not uploaded due to size limits.You can download it from [Kaggle link here].
 	•	Database connection details are defined in profiles.yml.
 	•	To rebuild the dashboard, connect Superset to your PostgreSQL database and import the SQL models.
+```
+
+---
+
+👤 **Author:** Ahmed Abohamad  
