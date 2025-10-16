@@ -138,7 +138,9 @@ data/
 	•	Run dbt models & tests
 
 ### 5️⃣ Launch Superset dashboard ###
+```
 superset run -p 8088 --host 127.0.0.1
+```
 
 Then open:
 ```
@@ -163,4 +165,5 @@ The dashboard includes:
 ---
 
 👤 **Author:** Ahmed Abohamad  
+
 
