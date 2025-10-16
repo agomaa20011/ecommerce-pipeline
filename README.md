@@ -149,11 +149,11 @@ http://localhost:8088
 
 ## 📊 Dashboard Metrics ##
 The dashboard includes:
-•	Top Products by Revenue
-•	Daily Conversion Rates
-•	Session Metrics
-•	Category Price Trends
-•	Hourly User Activity
+• Top Products by Revenue
+• Daily Conversion Rates
+• Session Metrics
+• Category Price Trends
+• Hourly User Activity
 
 ![dashboard](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/Screenshot%202025-10-16%20at%2020.59.01.png)
 ![dashboard](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/Screenshot%202025-10-16%20at%2020.59.28.png)
@@ -161,15 +161,15 @@ The dashboard includes:
 
 
 ### 💡 Notes ###
-
-•	The raw dataset is not uploaded due to size limits.You can download it from [Kaggle link here].
-•	Database connection details are defined in profiles.yml.
-•	To rebuild the dashboard, connect Superset to your PostgreSQL database and import the SQL models.
+* The raw dataset is not uploaded due to size limits.You can download it from [Kaggle](https://www.kaggle.com/datasets/yashtyagi1712/ecommercebehaviordatafrommulticategorystore).
+* Database connection details are defined in profiles.yml.
+* To rebuild the dashboard, connect Superset to your PostgreSQL database and import the SQL models.
 
 
 ---
 
 👤 **Author:** Ahmed Abohamad  
+
 
 
 
