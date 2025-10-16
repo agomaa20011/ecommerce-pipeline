@@ -109,7 +109,7 @@ ecommerce-pipeline/
 
 ### 1️⃣ Set up PostgreSQL ###
 	1.	Install PostgreSQL (version 14 or newer).
-    2.  2. Create a new database and user:
+    2. Create a new database and user:
 	sql
 	CREATE DATABASE ecommerce_pipeline;
 	CREATE USER postgres WITH PASSWORD '1234';
@@ -169,6 +169,7 @@ The dashboard includes:
 ---
 
 👤 **Author:** Ahmed Abohamad  
+
 
 
 
