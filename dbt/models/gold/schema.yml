@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: daily_conversion
+    columns:
+      - name: event_date
+        tests: [not_null]
+
+  - name: hourly_activity
+    columns:
+      - name: event_hour
+        tests: [not_null]
+
+  - name: session_metrics
+    columns:
+      - name: user_session
+        tests: [not_null, unique]
+
+  - name: top_products
+    columns:
+      - name: product_id
+        tests: [not_null]
+
+  - name: category_price_trends
+    columns:
+      - name: event_date
+        tests: [not_null]

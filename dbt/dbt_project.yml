@@ -1,0 +1,16 @@
+name: ecommerce_pipeline
+version: 1.0
+profile: ecommerce_profile
+
+model-paths: ['models']
+seed-paths: ['seeds']
+macro-paths: ['macros']
+snapshot-paths: ['snapshots']
+test-paths: ['tests']
+
+models:
+  ecommerce_pipeline:
+    +materialized: view
+    gold:
+      +schema: analytics
+      +materialized: table

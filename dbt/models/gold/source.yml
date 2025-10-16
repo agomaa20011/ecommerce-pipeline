@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: silver                # this is the nickname you'll use in dbt
+    database: ecommerce_pipeline
+    schema: silver              # actual schema name from your database
+    tables:
+      - name: fact_events
+      - name: dim_products
+      - name: dim_users
