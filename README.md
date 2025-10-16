@@ -149,11 +149,16 @@ http://localhost:8088
 
 ## 📊 Dashboard Metrics ##
 The dashboard includes:
-	•	Top Products by Revenue
-	•	Daily Conversion Rates
-	•	Session Metrics
-	•	Category Price Trends
-	•	Hourly User Activity
+•	Top Products by Revenue
+•	Daily Conversion Rates
+•	Session Metrics
+•	Category Price Trends
+•	Hourly User Activity
+
+![dashboard](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/Screenshot%202025-10-16%20at%2020.59.01.png)
+![dashboard](https://github.com/agomaa20011/ecommerce-pipeline/blob/main/Screenshot%202025-10-16%20at%2020.59.28.png)
+
+
 
 ### 💡 Notes ###
 
@@ -165,5 +170,6 @@ The dashboard includes:
 ---
 
 👤 **Author:** Ahmed Abohamad  
+
 
 
