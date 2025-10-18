@@ -95,9 +95,9 @@ ecommerce-pipeline/
 │   ├── schema.yml
 │   ├── source.yml
 │   └── dbt_project.yml
-│
-├── bronze_transform.py      # Spark transformation (landing → bronze)
-├── load_to_postgres.py      # Load parquet → PostgreSQL staging
+├── spark_jobs/
+│   ├── bronze_transform.py      # Spark transformation (landing → bronze)
+│   └── load_to_postgres.py      # Load parquet → PostgreSQL staging
 ├── run_pipeline.sh          # Runs all steps end-to-end
 ├── superset_config.py       # Superset configuration
 ├── requirements.txt         # Python dependencies
@@ -169,6 +169,7 @@ The dashboard includes:
 ---
 
 👤 **Author:** Ahmed Abohamad  
+
 
 
 
